@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="white">#000</color>
+    <color name="black">#fff</color>
     <color name="tex">#fff</color>
+    <color name="backp">#000</color>
+    <color name="backs">#1D1C1C</color>
+    <color name="button">#08223D</color>
 </resources>

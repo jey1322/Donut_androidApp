@@ -9,4 +9,7 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="tex">#000</color>
+    <color name="backp">#fff</color>
+    <color name="backs">#EFEEEE</color>
+    <color name="button">#08223D</color>
 </resources>

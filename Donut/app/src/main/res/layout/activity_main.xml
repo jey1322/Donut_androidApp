@@ -16,13 +16,85 @@
             android:layout_height="wrap_content"
             android:text="donut"
             android:textStyle="bold"
-            android:textColor="@color/tex"
+            android:textColor="@color/black"
             android:textSize="30dp"
             android:fontFamily="@font/nunito"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="160dp"/>
+            android:layout_marginTop="170dp"/>
+
+        <EditText
+            android:id="@+id/etcarnet"
+            android:layout_width="220dp"
+            android:layout_height="40dp"
+            android:hint="Carnet"
+            android:paddingStart="10dp"
+            android:textSize="13dp"
+            android:fontFamily="@font/nunito"
+            android:background="@drawable/edit"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/logo"
+            android:layout_marginTop="50dp"/>
+
+        <EditText
+            android:id="@+id/etpin"
+            android:layout_width="220dp"
+            android:layout_height="40dp"
+            android:hint="PIN"
+            android:paddingStart="10dp"
+            android:textSize="13dp"
+            android:fontFamily="@font/nunito"
+            android:background="@drawable/edit"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etcarnet"
+            android:layout_marginTop="20dp"/>
+
+        <EditText
+            android:id="@+id/etanio"
+            android:layout_width="220dp"
+            android:layout_height="40dp"
+            android:hint="2022"
+            android:paddingStart="10dp"
+            android:textSize="13dp"
+            android:fontFamily="@font/nunito"
+            android:background="@drawable/edit"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etpin"
+            android:layout_marginTop="20dp"/>
+
+        <androidx.constraintlayout.utils.widget.MotionButton
+            android:id="@+id/btnlog"
+            android:layout_width="220dp"
+            android:layout_height="40dp"
+            android:text="Ver notas"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:fontFamily="@font/nunito"
+            android:textAllCaps="false"
+            android:background="@drawable/button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etanio"
+            android:layout_marginTop="70dp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Al usar este servicio usted acepta los Términos."
+            android:textSize="13dp"
+            android:textStyle="bold"
+            android:fontFamily="@font/nunito"
+            android:textAlignment="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnlog"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="100dp"
+            android:layout_marginBottom="50dp"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
