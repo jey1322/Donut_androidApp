@@ -5,11 +5,15 @@
     <color name="purple_700">#FF3700B3</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
+
+
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="tex">#000</color>
-    <color name="backp">#fff</color>
-    <color name="backs">#EFEEEE</color>
-    <color name="button">#08223D</color>
+    <color name="tex">#c8c8c8</color>
+    <color name="backp">#f3f4f6</color>
+    <color name="backs">#ececec</color>
+    <color name="primary">#1f2937</color>
+    <color name="success">#419c2b</color>
+    <color name="error">#f26464</color>
 </resources>

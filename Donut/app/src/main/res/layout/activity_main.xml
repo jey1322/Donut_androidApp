@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@color/backp"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
@@ -22,12 +23,14 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="170dp"/>
+            android:layout_marginTop="120dp"/>
 
         <EditText
             android:id="@+id/etcarnet"
             android:layout_width="220dp"
             android:layout_height="40dp"
+            android:textColor="@color/tex"
+            android:inputType="text"
             android:hint="Carnet"
             android:paddingStart="10dp"
             android:textSize="13dp"
@@ -42,6 +45,8 @@
             android:id="@+id/etpin"
             android:layout_width="220dp"
             android:layout_height="40dp"
+            android:textColor="@color/tex"
+            android:inputType="text"
             android:hint="PIN"
             android:paddingStart="10dp"
             android:textSize="13dp"
@@ -56,6 +61,8 @@
             android:id="@+id/etanio"
             android:layout_width="220dp"
             android:layout_height="40dp"
+            android:textColor="@color/tex"
+            android:inputType="date"
             android:hint="2022"
             android:paddingStart="10dp"
             android:textSize="13dp"
@@ -87,6 +94,7 @@
             android:text="Al usar este servicio usted acepta los Términos."
             android:textSize="13dp"
             android:textStyle="bold"
+            android:textColor="@color/primary"
             android:fontFamily="@font/nunito"
             android:textAlignment="center"
             app:layout_constraintStart_toStartOf="parent"
