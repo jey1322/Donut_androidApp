@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#000</color>
+    <color name="black">#fff</color>
+
+    <color name="tex">#c8c8c8</color>
+    <color name="backp">#0E0E0E</color>
+    <color name="backs">#1F1E1E</color>
+    <color name="primary">#f3f4f6</color>
+    <color name="success">#419c2b</color>
+    <color name="error">#f26464</color>
+</resources>
