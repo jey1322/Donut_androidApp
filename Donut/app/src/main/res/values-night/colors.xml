@@ -9,4 +9,5 @@
     <color name="primary">#f3f4f6</color>
     <color name="success">#419c2b</color>
     <color name="error">#f26464</color>
+    <color name="splash">#1f2937</color>
 </resources>
