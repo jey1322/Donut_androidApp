@@ -1,4 +1,4 @@
-package com.codein.donut.view
+package com.codein.donut
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

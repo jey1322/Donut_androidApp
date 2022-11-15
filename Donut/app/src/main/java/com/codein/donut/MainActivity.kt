@@ -1,8 +1,7 @@
-package com.codein.donut.view
+package com.codein.donut
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.codein.donut.R
 import com.codein.donut.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
