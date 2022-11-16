@@ -64,7 +64,6 @@ class MainActivity : AppCompatActivity() {
                         }
                         else
                         {
-                            Log.e("MainActivity", "onResponse: ${response.errorBody()}")
                             Toast.makeText(this@MainActivity, "Error: Algo salió mal", Toast.LENGTH_SHORT).show()
                             binding.btnlog.isEnabled = true
                             binding.btnlog.text = "Iniciar sesión"

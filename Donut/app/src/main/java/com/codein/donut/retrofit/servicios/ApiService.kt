@@ -11,7 +11,6 @@ import retrofit2.http.POST
 interface ApiService {
 
     @POST(Urls.NOTAS_URL)
-    //headers es el accept
     @Headers("Accept: application/json")
     fun login( @Body request: LoginRequest): Call<LoginResponse>
 }
