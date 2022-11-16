@@ -10,5 +10,5 @@ data class LoginRequest(
     val password: String,
 
     @SerializedName("year")
-    val year: Int
+    val year: String
 )

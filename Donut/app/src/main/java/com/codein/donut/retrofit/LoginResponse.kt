@@ -13,7 +13,7 @@ data class LoginResponse(
     class Student{
         val year: String = ""
         val faculty: String = ""
-        val carrer : String = ""
+        val career : String = ""
         val name: String = ""
         val id: String = ""
         val cycle_year: String = ""
