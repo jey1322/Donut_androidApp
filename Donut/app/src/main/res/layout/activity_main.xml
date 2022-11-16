@@ -44,7 +44,7 @@
             android:id="@+id/etpin"
             android:layout_width="220dp"
             android:layout_height="40dp"
-            android:inputType="text"
+            android:inputType="textPassword"
             android:hint="PIN"
             android:paddingStart="10dp"
             android:textSize="13dp"
@@ -59,8 +59,8 @@
             android:id="@+id/etanio"
             android:layout_width="220dp"
             android:layout_height="40dp"
-            android:inputType="date"
-            android:hint="2022"
+            android:inputType="number"
+            android:hint="Año a buscar"
             android:paddingStart="10dp"
             android:textSize="13dp"
             android:fontFamily="@font/nunito"
@@ -86,6 +86,7 @@
             android:layout_marginTop="70dp"/>
 
         <TextView
+            android:id="@+id/tvterm"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="Al usar este servicio usted acepta los Términos."
@@ -97,8 +98,22 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/btnlog"
+            android:layout_marginTop="100dp"/>
+
+        <TextView
+            android:id="@+id/tvautor"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Desarrollado por KenetPicado y JairoPaniagua"
+            android:textSize="11dp"
+            android:textColor="@color/primary"
+            android:fontFamily="@font/nunito"
+            android:textAlignment="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvterm"
             app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="5dp"
             android:layout_marginBottom="50dp"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
