@@ -1,18 +1,15 @@
 package com.codein.donut
 
 import android.content.Intent
-import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.InputType
-import android.util.Log
 import android.widget.Toast
 import com.codein.donut.databinding.ActivityMainBinding
 import com.codein.donut.preferens.SessionManager
 import com.codein.donut.retrofit.LoginRequest
 import com.codein.donut.retrofit.LoginResponse
 import com.codein.donut.retrofit.servicios.ApiClient
-import org.w3c.dom.Text
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -40,8 +37,11 @@ class MainActivity : AppCompatActivity() {
 
 
             val id = binding.etcarnet.text.toString()
+            sessionManager.savelid(id)
             val pass = binding.etpin.text.toString()
+            sessionManager.savelpass(pass)
             var year = binding.etanio.text.toString()
+            sessionManager.savelyear(year)
 
             if (id.isEmpty())
             {
@@ -82,17 +82,15 @@ class MainActivity : AppCompatActivity() {
 
                                 if (resp?.student?.id != null)
                                 {
-                                    //mostrar en log el id del estudiante
-                                    Log.d("idestudent", "onResponse: ${resp.student.id}")
-                                    Toast.makeText(this@MainActivity, "Bienvenido estudiante...", Toast.LENGTH_SHORT).show()
-                                    sessionManager.saveYear(resp.student.year)
+                                    /*sessionManager.saveYear(resp.student.year)
                                     sessionManager.saveAverage(resp.student.average)
                                     sessionManager.saveId(resp.student.id)
                                     sessionManager.saveName(resp.student.name)
                                     sessionManager.saveCareer(resp.student.career)
                                     sessionManager.saveCycleYear(resp.student.cycle_year)
-                                    sessionManager.saveFaculty(resp.student.faculty)
+                                    sessionManager.saveFaculty(resp.student.faculty)*/
 
+                                    Toast.makeText(this@MainActivity, "Bienvenido estudiante...", Toast.LENGTH_SHORT).show()
                                     startActivity(Intent(this@MainActivity, Home::class.java))
                                     finish()
 
@@ -100,22 +98,20 @@ class MainActivity : AppCompatActivity() {
                                 else
                                 {
                                     binding.etanio.error = "este es el año a buscar?"
-                                    //pintar el contenido de etpass
                                     binding.etpin.error = "PIN es correcto?"
                                     binding.etpin.inputType = InputType.TYPE_CLASS_TEXT
                                     binding.etcarnet.error = "Carnet es correcto?"
+
                                     Toast.makeText(this@MainActivity, "Error: Algo salió mal", Toast.LENGTH_SHORT).show()
+
                                     binding.btnlog.isEnabled = true
                                     binding.btnlog.background = resources.getDrawable(R.drawable.button)
                                     binding.btnlog.text = "Iniciar sesión"
                                 }
                             }
-
                         })
                 }
             }
-
-
         }
     }
 }
