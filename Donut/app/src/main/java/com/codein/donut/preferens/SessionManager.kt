@@ -15,6 +15,39 @@ class SessionManager (context: Context) {
         const val ID = "id"
         const val CYCLE_YEAR = "cycle_year"
         const val AVERAGE = "average"
+
+        const val LID = "lid"
+        const val LPASS = "lpass"
+        const val LYEAR = "lyear"
+    }
+    fun savelid(lid: String?) {
+        prefs.edit().putString(LID, lid).apply()
+    }
+    fun fetchlid(): String? {
+        return prefs.getString(LID, null)
+    }
+    fun deletelid() {
+        prefs.edit().remove(LID).apply()
+    }
+
+    fun savelpass(lpass: String?) {
+        prefs.edit().putString(LPASS, lpass).apply()
+    }
+    fun fetchlpass(): String? {
+        return prefs.getString(LPASS, null)
+    }
+    fun deletelpass() {
+        prefs.edit().remove(LPASS).apply()
+    }
+
+    fun savelyear(lyear: String?) {
+        prefs.edit().putString(LYEAR, lyear).apply()
+    }
+    fun fetchlyear(): String? {
+        return prefs.getString(LYEAR, null)
+    }
+    fun deletelyear() {
+        prefs.edit().remove(LYEAR).apply()
     }
 
     fun saveYear(year: String?) {
