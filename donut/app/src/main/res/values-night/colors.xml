@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="backp">fff</color>
+    <color name="backp">#141414</color>
+    <color name="white">#000</color>
+    <color name="primary">#1f2937</color>
+    <color name="success">#419c2b</color>
+    <color name="error">#f26464</color>
+    <color name="edit">#ececec</color>
+    <color name="text">#c8c8c8</color>
 </resources>
