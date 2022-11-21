@@ -57,6 +57,8 @@ class MainActivity : AppCompatActivity() {
                         binding.btnIngresar.background = getDrawable(R.drawable.buttonproc)
                         binding.btnIngresar.text = "solicitando datos..."
 
+
+                        //recuerda que el erro de okhttp tal y tal cosa, intenta probar enviado los valores estaticos
                         apiClient.getApiService(this).login(LoginRequest(
                             id = id,
                             password = pin,
