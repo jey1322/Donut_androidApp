@@ -1,5 +1,6 @@
 package com.codein.donut
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.InputType
@@ -78,6 +79,11 @@ class MainActivity : AppCompatActivity() {
                                     val resp = response.body()
                                     if (resp?.student?.name != null) {
                                         Toast.makeText(this@MainActivity, "Bienvenido...", Toast.LENGTH_SHORT).show()
+                                        val intent = Intent(this@MainActivity, Home::class.java)
+                                        //intent.putExtra("student", resp.student)
+                                        intent.putExtra("components", resp.components.toTypedArray())
+                                        startActivity(intent)
+                                        finish()
                                     }
                                     else {
                                         binding.etAnio.error = "este es el año a buscar?"

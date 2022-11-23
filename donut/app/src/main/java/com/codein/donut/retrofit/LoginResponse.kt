@@ -23,6 +23,7 @@ data class LoginResponse(
 
     class Component
     {
+        var visib : Boolean = false
         val name : String = ""
         val partial_1 : String = ""
         val partial_2 : String = ""
