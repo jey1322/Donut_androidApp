@@ -21,7 +21,7 @@ class NotaAdapter(private val context: Context, private val mNotas : List<LoginR
     override fun onBindViewHolder(holder: NotaViewHolder, position: Int) {
         holder.nombre.text = mNotas[position].name
         holder.finalgrade.text = mNotas[position].final_grade
-        if (mNotas[position].final_grade.toInt() > 59.4)
+        if (mNotas[position].final_grade > "59.4")
         {
             holder.estado.text = "Aprobado"
             holder.estado.setTextColor(context.resources.getColor(R.color.success))
@@ -31,10 +31,10 @@ class NotaAdapter(private val context: Context, private val mNotas : List<LoginR
             holder.estado.text = "Reprobado"
             holder.estado.setTextColor(context.resources.getColor(R.color.error))
         }
-        holder.partial1.text = mNotas[position].partial_1
-        holder.partial2.text = mNotas[position].partial_2
-        holder.partial3.text = mNotas[position].partial_3
-        holder.secondcall.text = mNotas[position].second_call
+        holder.partial1.text = "I Parcial: "+mNotas[position].partial_1
+        holder.partial2.text = "II Parcial: "+mNotas[position].partial_2
+        holder.partial3.text = "IIIParcial: "+mNotas[position].partial_3
+        holder.secondcall.text = "Especial: "+mNotas[position].second_call
 
         val isExpanded : Boolean = mNotas[position].visib
         holder.expanded.visibility = if (isExpanded) View.VISIBLE else View.GONE

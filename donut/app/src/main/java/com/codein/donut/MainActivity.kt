@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.text.InputType
 import android.widget.Toast
 import com.codein.donut.databinding.ActivityMainBinding
+import com.codein.donut.preferense.SessionManager
 import com.codein.donut.retrofit.LoginRequest
 import com.codein.donut.retrofit.LoginResponse
 import com.codein.donut.retrofit.services.ApiClient
@@ -16,6 +17,7 @@ import retrofit2.Response
 class MainActivity : AppCompatActivity() {
 
     private lateinit var apiClient: ApiClient
+    private lateinit var sessionManager: SessionManager
 
     private lateinit var binding : ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,6 +26,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         apiClient = ApiClient()
+        sessionManager = SessionManager(this)
 
         binding.btnIngresar.setOnClickListener {
 
@@ -58,6 +61,9 @@ class MainActivity : AppCompatActivity() {
                         binding.btnIngresar.background = getDrawable(R.drawable.buttonproc)
                         binding.btnIngresar.text = "solicitando datos..."
 
+                        sessionManager.savelid(id)
+                        sessionManager.savelpass(pin)
+                        sessionManager.savelyear(year)
 
                         //recuerda que el erro de okhttp tal y tal cosa, intenta probar enviado los valores estaticos
                         apiClient.getApiService(this).login(LoginRequest(
@@ -80,8 +86,6 @@ class MainActivity : AppCompatActivity() {
                                     if (resp?.student?.name != null) {
                                         Toast.makeText(this@MainActivity, "Bienvenido...", Toast.LENGTH_SHORT).show()
                                         val intent = Intent(this@MainActivity, Home::class.java)
-                                        //intent.putExtra("student", resp.student)
-                                        intent.putExtra("components", resp.components.toTypedArray())
                                         startActivity(intent)
                                         finish()
                                     }
