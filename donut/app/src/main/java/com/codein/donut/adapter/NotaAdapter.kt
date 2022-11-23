@@ -20,6 +20,14 @@ class NotaAdapter(private val context: Context, private val mNotas : List<LoginR
 
     override fun onBindViewHolder(holder: NotaViewHolder, position: Int) {
         holder.nombre.text = mNotas[position].name
+        //si mnota name empieza con "P" entonces
+        if (mNotas[position].name.startsWith("Curso") || mNotas[position].name.startsWith("Ciclo")) {
+            holder.titulo.text = mNotas[position].name
+            holder.titulo.visibility = View.VISIBLE
+        }
+        else {
+            holder.mod.visibility = View.VISIBLE
+        }
         holder.finalgrade.text = mNotas[position].final_grade
         if (mNotas[position].final_grade > "59.4")
         {
@@ -28,6 +36,7 @@ class NotaAdapter(private val context: Context, private val mNotas : List<LoginR
         }
         else
         {
+            holder.finalgrade.setTextColor(context.resources.getColor(R.color.error))
             holder.estado.text = "Reprobado"
             holder.estado.setTextColor(context.resources.getColor(R.color.error))
         }
@@ -61,5 +70,8 @@ class NotaAdapter(private val context: Context, private val mNotas : List<LoginR
 
             val expanded : ConstraintLayout = cview.findViewById(R.id.expanded)
             val select = cview.findViewById<TextView>(R.id.select)
+
+            val titulo = cview.findViewById<TextView>(R.id.titulo)
+            val mod : ConstraintLayout = cview.findViewById(R.id.mod)
         }
 }
