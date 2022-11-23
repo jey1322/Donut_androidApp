@@ -36,11 +36,15 @@ class NotaAdapter(private val context: Context, private val mNotas : List<LoginR
         }
         else
         {
-            holder.finalgrade.setTextColor(context.resources.getColor(R.color.error))
             holder.estado.text = "Reprobado"
             holder.estado.setTextColor(context.resources.getColor(R.color.error))
         }
         holder.partial1.text = "I Parcial: "+mNotas[position].partial_1
+        if (mNotas[position].partial_1.startsWith("SATIS"))
+        {
+            holder.estado.text = "Aprobado"
+            holder.estado.setTextColor(context.resources.getColor(R.color.success))
+        }
         holder.partial2.text = "II Parcial: "+mNotas[position].partial_2
         holder.partial3.text = "IIIParcial: "+mNotas[position].partial_3
         holder.secondcall.text = "Especial: "+mNotas[position].second_call

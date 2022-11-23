@@ -40,7 +40,7 @@ class Home : AppCompatActivity() {
         val pass = sessionManager.fetchlpass()
         val year = sessionManager.fetchlyear()
 
-        apiClient.getApiService(this).login(LoginRequest(id = "16-01447-0", password = "NAFUWP", year = "2021"))
+        apiClient.getApiService(this).login(LoginRequest(id = id.toString(), password = pass.toString(), year = year.toString()))
             .enqueue(object : Callback<LoginResponse>{
 
                 override fun onFailure(call: Call<LoginResponse>, t: Throwable) {
