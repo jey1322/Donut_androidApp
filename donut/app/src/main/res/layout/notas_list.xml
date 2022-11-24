@@ -52,14 +52,15 @@
             android:id="@+id/tvestado"
             tool:text="Aprobado"
             android:textSize="12dp"
+            android:textStyle="bold"
             android:textColor="@color/success"
             android:fontFamily="@font/nunito"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tvname"
             app:layout_constraintBottom_toTopOf="@id/expanded"
             android:layout_marginBottom="10dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"/>
+            android:padding="10dp"
+            android:layout_marginTop="15dp"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -107,7 +108,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"/>
+                android:layout_marginBottom="20dp"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -122,7 +123,7 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 android:layout_marginStart="10dp"
-                android:layout_marginBottom="10dp"
+                android:layout_marginBottom="20dp"
                 android:layout_marginEnd="10dp"
                 android:layout_marginTop="10dp"/>
 
@@ -137,7 +138,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
-                android:layout_marginBottom="10dp"
+                android:layout_marginBottom="20dp"
                 android:layout_marginEnd="10dp"
                 android:layout_marginTop="10dp"/>
 
@@ -153,7 +154,7 @@
                 app:layout_constraintStart_toEndOf="@id/partial_2"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
-                android:layout_marginBottom="10dp"
+                android:layout_marginBottom="20dp"
                 android:layout_marginEnd="10dp"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"/>
