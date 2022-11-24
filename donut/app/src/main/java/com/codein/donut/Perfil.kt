@@ -1,5 +1,6 @@
 package com.codein.donut
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.codein.donut.databinding.ActivityPerfilBinding
@@ -26,5 +27,21 @@ class Perfil : AppCompatActivity() {
         binding.tvanio.text = sessionManager.fetchYear()
         binding.tvgrado.text = sessionManager.fetchCycleYear()
         binding.tvindice.text = sessionManager.fetchAverage()
+
+        binding.btn.setOnClickListener {
+            sessionManager.deleteAverage()
+            sessionManager.deleteCareer()
+            sessionManager.deleteCycleYear()
+            sessionManager.deleteFaculty()
+            sessionManager.deleteId()
+            sessionManager.deleteName()
+            sessionManager.deleteYear()
+            sessionManager.deletelid()
+            sessionManager.deletelpass()
+            sessionManager.deletelyear()
+            finish()
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
