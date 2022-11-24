@@ -75,7 +75,7 @@ class MainActivity : AppCompatActivity() {
                             .enqueue(object : Callback<LoginResponse>{
 
                                 override fun onFailure(call: Call<LoginResponse>, t: Throwable) {
-                                    Toast.makeText(this@MainActivity, "Error al conectar", Toast.LENGTH_SHORT).show()
+                                    Toast.makeText(this@MainActivity, "Error en conexión, inténtelo de nuevo", Toast.LENGTH_SHORT).show()
                                     binding.btnIngresar.isEnabled = true
                                     binding.btnIngresar.background = getDrawable(R.drawable.btn)
                                     binding.btnIngresar.text = "Ver notas"

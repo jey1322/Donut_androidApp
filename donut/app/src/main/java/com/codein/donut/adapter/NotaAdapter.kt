@@ -21,7 +21,7 @@ class NotaAdapter(private val context: Context, private val mNotas : List<LoginR
     override fun onBindViewHolder(holder: NotaViewHolder, position: Int) {
         holder.nombre.text = mNotas[position].name
         //si mnota name empieza con "P" entonces
-        if (mNotas[position].name.startsWith("Curso") || mNotas[position].name.startsWith("Ciclo")) {
+        if (mNotas[position].name.startsWith("Curs") || mNotas[position].name.startsWith("Cicl")) {
             holder.titulo.text = mNotas[position].name
             holder.titulo.visibility = View.VISIBLE
         }
