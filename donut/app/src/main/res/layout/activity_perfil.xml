@@ -1,9 +1,189 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/backp"
     tools:context=".Perfil">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/tb"
+            layout="@layout/toolbar"/>
+
+        <TextView
+            android:id="@+id/tvdat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Datos del alumno"
+            android:textColor="@color/primary"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:fontFamily="@font/nunito"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tb"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="20dp"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvdat"
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="20dp"
+            android:background="@drawable/recycler">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvnombre"
+                android:text="Nombre"
+                android:textColor="@color/primary"
+                android:textSize="13dp"
+                android:fontFamily="@font/nunito"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvcarnet"
+                android:text="carnet"
+                android:textColor="@color/primary"
+                android:textSize="13dp"
+                android:fontFamily="@font/nunito"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvnombre"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="10dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tvaca"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Datos académicos"
+            android:textColor="@color/primary"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:fontFamily="@font/nunito"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cl1"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="20dp"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvaca"
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="20dp"
+            android:background="@drawable/recycler">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvfacultad"
+                android:text="facultad"
+                android:textColor="@color/primary"
+                android:textSize="13dp"
+                android:fontFamily="@font/nunito"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvcarrera"
+                android:text="carnet"
+                android:textColor="@color/primary"
+                android:textSize="13dp"
+                android:fontFamily="@font/nunito"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvfacultad"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="20dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvanio"
+                android:text="Anio"
+                android:textColor="@color/primary"
+                android:textSize="13dp"
+                android:fontFamily="@font/nunito"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvcarrera"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvgrado"
+                android:text="5"
+                android:textColor="@color/primary"
+                android:textSize="13dp"
+                android:fontFamily="@font/nunito"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvanio"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="10dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cl2"
+            android:background="@drawable/btn"
+            android:layout_marginTop="40dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="40dp"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <TextView
+                android:id="@+id/tvindice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Indice"
+                android:textColor="@color/white"
+                android:textSize="15dp"
+                android:fontFamily="@font/nunito"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

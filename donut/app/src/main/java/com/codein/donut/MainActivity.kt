@@ -84,6 +84,15 @@ class MainActivity : AppCompatActivity() {
                                 ) {
                                     val resp = response.body()
                                     if (resp?.student?.name != null) {
+
+                                        sessionManager.saveName(resp.student.name)
+                                        sessionManager.saveCareer(resp.student.career)
+                                        sessionManager.saveId(resp.student.id)
+                                        sessionManager.saveYear(resp.student.year)
+                                        sessionManager.saveFaculty(resp.student.faculty)
+                                        sessionManager.saveCycleYear(resp.student.cycle_year)
+                                        sessionManager.saveAverage(resp.student.average)
+
                                         Toast.makeText(this@MainActivity, "Bienvenido...", Toast.LENGTH_SHORT).show()
                                         val intent = Intent(this@MainActivity, Home::class.java)
                                         startActivity(intent)
