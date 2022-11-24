@@ -11,7 +11,7 @@
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcherfin"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcherfin_round"
+        android:roundIcon="@mipmap/ic_launcherfin_foreground"
         android:supportsRtl="true"
         android:theme="@style/Theme.Donut"
         android:usesCleartextTraffic="true"
