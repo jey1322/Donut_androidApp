@@ -1,7 +1,10 @@
 package com.codein.donut
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.codein.donut.adapter.NotaAdapter
@@ -10,6 +13,7 @@ import com.codein.donut.preferense.SessionManager
 import com.codein.donut.retrofit.LoginRequest
 import com.codein.donut.retrofit.LoginResponse
 import com.codein.donut.retrofit.services.ApiClient
+import com.codein.donut.toolbar.MyToolbar
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -30,10 +34,32 @@ class Home : AppCompatActivity() {
         apiClient = ApiClient()
         sessionManager = SessionManager(this)
 
+        MyToolbar().mostrar(this, "Donut", false)
+
         initRecyclerView()
         obtenerMatriculas()
-
     }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.button, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if (item.itemId == R.id.homeb) {
+            Toast.makeText(this, "cargando...", Toast.LENGTH_SHORT).show()
+            finish()
+            val intent = Intent(this, Home::class.java)
+            startActivity(intent)
+        }
+        if (item.itemId == R.id.perfilb)
+        {
+            startActivity(Intent(this, Perfil::class.java))
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
+
     fun obtenerMatriculas()
     {
         val id = sessionManager.fetchlid()
@@ -44,6 +70,7 @@ class Home : AppCompatActivity() {
             .enqueue(object : Callback<LoginResponse>{
 
                 override fun onFailure(call: Call<LoginResponse>, t: Throwable) {
+                    binding.pb.visibility = android.view.View.GONE
                     Toast.makeText(this@Home, "Error en conexion", Toast.LENGTH_SHORT).show()
                 }
 
@@ -51,6 +78,7 @@ class Home : AppCompatActivity() {
                     call: Call<LoginResponse>,
                     response: Response<LoginResponse>
                 ) {
+                    binding.pb.visibility = android.view.View.GONE
                     mNotas.clear()
                     mNotas.addAll(response.body()?.components!!)
                     adapter.notifyDataSetChanged()

@@ -14,4 +14,10 @@
         <item name="android:windowLightStatusBar">true</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="ToolbarTheme" parent="ThemeOverlay.AppCompat.ActionBar">
+        <item name="colorControlNormal">@color/primary</item>
+        <item name="android:fontFamily">@font/nunito</item>
+        <item name="titleTextColor">@color/primary</item>
+    </style>
 </resources>
