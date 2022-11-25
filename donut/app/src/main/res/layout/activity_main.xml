@@ -58,7 +58,7 @@
             android:id="@+id/etAnio"
             android:layout_width="240dp"
             android:layout_height="wrap_content"
-            android:hint="Año a consultar"
+            android:hint="Año"
             android:inputType="number"
             android:textSize="13dp"
             android:fontFamily="@font/nunito"

@@ -24,9 +24,11 @@ class NotaAdapter(private val context: Context, private val mNotas : List<LoginR
         if (mNotas[position].name.startsWith("Curs") || mNotas[position].name.startsWith("Cicl")) {
             holder.titulo.text = mNotas[position].name
             holder.titulo.visibility = View.VISIBLE
+            holder.mod.visibility = View.GONE
         }
         else {
             holder.mod.visibility = View.VISIBLE
+            holder.titulo.visibility = View.GONE
         }
         holder.finalgrade.text = mNotas[position].final_grade
         if (mNotas[position].final_grade > "59.4")
@@ -46,7 +48,7 @@ class NotaAdapter(private val context: Context, private val mNotas : List<LoginR
             holder.estado.setTextColor(context.resources.getColor(R.color.success))
         }
         holder.partial2.text = "II Parcial: "+mNotas[position].partial_2
-        holder.partial3.text = "IIIParcial: "+mNotas[position].partial_3
+        holder.partial3.text = "III Parcial: "+mNotas[position].partial_3
         holder.secondcall.text = "Especial: "+mNotas[position].second_call
 
         val isExpanded : Boolean = mNotas[position].visib
