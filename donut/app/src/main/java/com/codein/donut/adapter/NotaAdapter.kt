@@ -50,6 +50,11 @@ class NotaAdapter(private val context: Context, private val mNotas : List<LoginR
         holder.partial2.text = "II Parcial: "+mNotas[position].partial_2
         holder.partial3.text = "III Parcial: "+mNotas[position].partial_3
         holder.secondcall.text = "Especial: "+mNotas[position].second_call
+        if (mNotas[position].second_call > "59.4")
+        {
+            holder.estado.text = "Aprobado en especial con "+mNotas[position].second_call
+            holder.estado.setTextColor(context.resources.getColor(R.color.success))
+        }
 
         val isExpanded : Boolean = mNotas[position].visib
         holder.expanded.visibility = if (isExpanded) View.VISIBLE else View.GONE
