@@ -1,5 +1,6 @@
 package com.codein.donut
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -12,6 +13,7 @@ class Perfil : AppCompatActivity() {
     private lateinit var binding : ActivityPerfilBinding
     private lateinit var sessionManager: SessionManager
 
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityPerfilBinding.inflate(layoutInflater)
@@ -27,6 +29,9 @@ class Perfil : AppCompatActivity() {
         binding.tvanio.text = sessionManager.fetchYear()
         binding.tvgrado.text = sessionManager.fetchCycleYear()
         binding.tvindice.text = sessionManager.fetchAverage()
+        binding.tvclases.text = "Clases aprobadas: "+intent.getIntExtra("clases",0)+"/"+intent.getIntExtra("aprobadas",0)
+        binding.tvespecial.text = "Especiales: "+intent.getIntExtra("especial",0)
+
 
         binding.btn.setOnClickListener {
             sessionManager.deleteAverage()

@@ -1,12 +1,14 @@
 package com.codein.donut.adapter
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
+import com.codein.donut.Home
 import com.codein.donut.R
 import com.codein.donut.retrofit.LoginResponse
 
@@ -63,6 +65,36 @@ class NotaAdapter(private val context: Context, private val mNotas : List<LoginR
             mNotas[position].visib = !mNotas[position].visib
             notifyItemChanged(position)
         }
+
+        //obtener el numero de veces donde second_call no sea null
+        var especial = 0
+        for (i in mNotas.indices) {
+            if (mNotas[i].second_call != null) {
+                especial++
+            }
+        }
+
+
+        //obtener el numero de nombres
+        var clases = 0
+        for (i in mNotas.indices) {
+            if (mNotas[i].name != null && !mNotas[i].name.startsWith("Curs") || !mNotas[i].name.startsWith("Cicl")) {
+                clases++
+            }
+        }
+
+        //obtener el numero de veces donde estado inicie con "Aprobado"
+        var aprobadas = 0
+        for (i in mNotas.indices) {
+            if (mNotas[i].final_grade > "59.4" || mNotas[i].second_call > "59.4") {
+                aprobadas++
+            }
+        }
+
+        val intent = Intent(context, Home::class.java)
+        intent.putExtra("clases", clases)
+        intent.putExtra("aprobadas", aprobadas)
+        intent.putExtra("especial", especial)
     }
 
     override fun getItemCount(): Int {
