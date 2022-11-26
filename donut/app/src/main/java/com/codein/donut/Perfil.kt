@@ -29,8 +29,12 @@ class Perfil : AppCompatActivity() {
         binding.tvanio.text = sessionManager.fetchYear()
         binding.tvgrado.text = sessionManager.fetchCycleYear()
         binding.tvindice.text = sessionManager.fetchAverage()
-        binding.tvclases.text = "Clases aprobadas: "+intent.getIntExtra("clases",0)+"/"+intent.getIntExtra("aprobadas",0)
-        binding.tvespecial.text = "Especiales: "+intent.getIntExtra("especial",0)
+
+        //val clases = sessionManager.fetchClases()
+        //val aprob = sessionManager.fetchAprob()
+        //val espe = sessionManager.fetchEspe()
+        //binding.tvclases.text = "Materias aprobadas: "+aprob+" de "+clases
+        //binding.tvespecial.text = "Especiales realizado: "+espe
 
 
         binding.btn.setOnClickListener {

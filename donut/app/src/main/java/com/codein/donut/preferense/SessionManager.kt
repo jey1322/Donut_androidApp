@@ -19,7 +19,42 @@ class SessionManager (context: Context) {
         const val LID = "lid"
         const val LPASS = "lpass"
         const val LYEAR = "lyear"
+
+        const val CLASES = "clases"
+        const val APROB = "aprob"
+        const val ESPE = "espe"
     }
+
+    fun saveClases(clases: String?) {
+        prefs.edit().putString(CLASES, clases).apply()
+    }
+    fun deleteClases() {
+        prefs.edit().remove(CLASES).apply()
+    }
+    fun fetchClases(): String? {
+        return prefs.getString(CLASES, null)
+    }
+
+    fun saveAprob(aprob: String?) {
+        prefs.edit().putString(APROB, aprob).apply()
+    }
+    fun deleteAprob() {
+        prefs.edit().remove(APROB).apply()
+    }
+    fun fetchAprob(): String? {
+        return prefs.getString(APROB, null)
+    }
+
+    fun saveEspe(espe: String?) {
+        prefs.edit().putString(ESPE, espe).apply()
+    }
+    fun deleteEspe() {
+        prefs.edit().remove(ESPE).apply()
+    }
+    fun fetchEspe(): String? {
+        return prefs.getString(ESPE, null)
+    }
+
     fun savelid(lid: String?) {
         prefs.edit().putString(LID, lid).apply()
     }

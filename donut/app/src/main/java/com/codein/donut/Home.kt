@@ -78,6 +78,35 @@ class Home : AppCompatActivity() {
                     call: Call<LoginResponse>,
                     response: Response<LoginResponse>
                 ) {
+/*
+                    //obtener el numero de veces donde second_call no sea null
+                    var espe = 0
+                    for (i in response.body()?.components!!) {
+                        if (i.second_call != null || i.second_call != "") {
+                            espe++
+                        }
+                    }
+
+                   var clases = 0
+                    for (i in response.body()?.components!!) {
+                        if (i.final_grade < "59.5" || i.second_call < "59.5" || i.partial_1 != "SATISFACTORIO") {
+                            clases++
+                        }
+                    }
+
+
+                    //obtener el numero de veces donde estado inicie con "Aprobado"
+                    var aprob = 0
+                    for (i in response.body()?.components!!) {
+                        if (i.final_grade > "59.4" || i.second_call > "59.4" || i.partial_1 == "SATISFACTORIO") {
+                            aprob++
+                        }
+                    }
+
+                    sessionManager.saveClases(clases.toString())
+                    sessionManager.saveAprob(aprob.toString())
+                    sessionManager.saveEspe(espe.toString()) */
+
                     binding.pb.visibility = android.view.View.GONE
                     mNotas.clear()
                     mNotas.addAll(response.body()?.components!!)
