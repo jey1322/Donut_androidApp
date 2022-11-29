@@ -71,6 +71,11 @@ class Home : AppCompatActivity() {
 
                 override fun onFailure(call: Call<LoginResponse>, t: Throwable) {
                     binding.pb.visibility = android.view.View.GONE
+                    binding.reintentar.visibility = android.view.View.VISIBLE
+                    binding.reintentar.setOnClickListener {
+                        startActivity(Intent(this@Home, Home::class.java))
+                        finish()
+                    }
                     Toast.makeText(this@Home, "Error en conexion", Toast.LENGTH_SHORT).show()
                 }
 

@@ -12,6 +12,17 @@
             android:id="@+id/tb"
             layout="@layout/toolbar"/>
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+                android:text="Reintentar"
+                android:textColor="@color/primary"
+                android:textSize="17dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="200dp"
+                android:visibility="gone"
+                android:id="@+id/reintentar"/>
+
         <ProgressBar
             android:id="@+id/pb"
             android:layout_width="wrap_content"

@@ -1,14 +1,12 @@
 package com.codein.donut.adapter
 
 import android.content.Context
-import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
-import com.codein.donut.Home
 import com.codein.donut.R
 import com.codein.donut.retrofit.LoginResponse
 
@@ -33,7 +31,7 @@ class NotaAdapter(private val context: Context, private val mNotas : List<LoginR
             holder.titulo.visibility = View.GONE
         }
         holder.finalgrade.text = mNotas[position].final_grade
-        if (mNotas[position].final_grade > "59.4")
+        if (mNotas[position].final_grade > "59.4" || mNotas[position].final_grade == "100")
         {
             holder.estado.text = "Aprobado"
             holder.estado.setTextColor(context.resources.getColor(R.color.success))
@@ -52,7 +50,7 @@ class NotaAdapter(private val context: Context, private val mNotas : List<LoginR
         holder.partial2.text = "II Parcial: "+mNotas[position].partial_2
         holder.partial3.text = "III Parcial: "+mNotas[position].partial_3
         holder.secondcall.text = "Especial: "+mNotas[position].second_call
-        if (mNotas[position].second_call > "59.4")
+        if (mNotas[position].second_call > "59.4" || mNotas[position].second_call == "100")
         {
             holder.estado.text = "Aprobado en especial con "+mNotas[position].second_call
             holder.estado.setTextColor(context.resources.getColor(R.color.success))
