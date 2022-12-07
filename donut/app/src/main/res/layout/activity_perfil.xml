@@ -26,7 +26,7 @@
             android:fontFamily="@font/nunito"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tb"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="30dp"
             android:layout_marginStart="20dp"/>
 
         <androidx.constraintlayout.widget.ConstraintLayout
