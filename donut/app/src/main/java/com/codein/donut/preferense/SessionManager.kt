@@ -23,6 +23,16 @@ class SessionManager (context: Context) {
         const val CLASES = "clases"
         const val APROB = "aprob"
         const val ESPE = "espe"
+        const val CURSO = "curso"
+    }
+    fun saveCurso(curso: String?) {
+        prefs.edit().putString(CURSO, curso).apply()
+    }
+    fun fetchCurso(): String? {
+        return prefs.getString(CURSO, null)
+    }
+    fun deleteCurso() {
+        prefs.edit().remove(CURSO).apply()
     }
 
     fun saveClases(clases: String?) {

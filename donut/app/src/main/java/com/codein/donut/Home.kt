@@ -83,18 +83,18 @@ class Home : AppCompatActivity() {
                     call: Call<LoginResponse>,
                     response: Response<LoginResponse>
                 ) {
-/*
                     //obtener el numero de veces donde second_call no sea null
                     var espe = 0
                     for (i in response.body()?.components!!) {
-                        if (i.second_call != null || i.second_call != "") {
+                        if (i.second_call > "0") {
                             espe++
                         }
                     }
 
+
                    var clases = 0
                     for (i in response.body()?.components!!) {
-                        if (i.final_grade < "59.5" || i.second_call < "59.5" || i.partial_1 != "SATISFACTORIO") {
+                        if (i.partial_1 >= "0" || i.partial_1.startsWith("SATIS") || i.partial_1 == "-") {
                             clases++
                         }
                     }
@@ -108,9 +108,17 @@ class Home : AppCompatActivity() {
                         }
                     }
 
+                    var cursos = 0
+                    for (i in response.body()?.components!!) {
+                        if (i.partial_1 == "-") {
+                            cursos++
+                        }
+                    }
+
                     sessionManager.saveClases(clases.toString())
                     sessionManager.saveAprob(aprob.toString())
-                    sessionManager.saveEspe(espe.toString()) */
+                    sessionManager.saveEspe(espe.toString())
+                    sessionManager.saveCurso(cursos.toString())
 
                     binding.pb.visibility = android.view.View.GONE
                     mNotas.clear()

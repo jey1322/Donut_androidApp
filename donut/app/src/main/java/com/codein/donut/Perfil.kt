@@ -30,11 +30,13 @@ class Perfil : AppCompatActivity() {
         binding.tvgrado.text = sessionManager.fetchCycleYear()
         binding.tvindice.text = sessionManager.fetchAverage()
 
-        //val clases = sessionManager.fetchClases()
-        //val aprob = sessionManager.fetchAprob()
-        //val espe = sessionManager.fetchEspe()
-        //binding.tvclases.text = "Materias aprobadas: "+aprob+" de "+clases
-        //binding.tvespecial.text = "Especiales realizado: "+espe
+        val clases = sessionManager.fetchClases()
+        val aprob = sessionManager.fetchAprob()
+        val espe = sessionManager.fetchEspe()
+        val curso = sessionManager.fetchCurso()
+        binding.tvaprob.text = "Materias aprobadas: "+aprob+" / "+clases
+        binding.tvespecial.text = "Especiales realizados: "+espe
+        binding.tvcurso.text = "Cursos de verano realizados: "+curso
 
 
         binding.btn.setOnClickListener {
@@ -48,6 +50,10 @@ class Perfil : AppCompatActivity() {
             sessionManager.deletelid()
             sessionManager.deletelpass()
             sessionManager.deletelyear()
+            sessionManager.deleteCurso()
+            sessionManager.deleteAprob()
+            sessionManager.deleteClases()
+            sessionManager.deleteEspe()
             finish()
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
