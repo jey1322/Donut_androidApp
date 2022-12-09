@@ -1,6 +1,7 @@
 package com.codein.donut
 
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.InputType
@@ -28,6 +29,13 @@ class MainActivity : AppCompatActivity() {
 
         apiClient = ApiClient()
         sessionManager = SessionManager(this)
+
+        binding.terminos.setOnClickListener {
+            Uri.parse("http://cb-develop.tk/terms").let { uri ->
+                val intent = Intent(Intent.ACTION_VIEW, uri)
+                startActivity(intent)
+            }
+        }
 
         binding.btnIngresar.setOnClickListener {
 

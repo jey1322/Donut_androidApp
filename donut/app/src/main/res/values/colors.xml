@@ -15,5 +15,7 @@
     <color name="edit">#ececec</color>
     <color name="text">#535252</color>
 
+    <color name="btndisable">#5AB7D4</color>
+
     <color name="splash">#1f2937</color>
 </resources>

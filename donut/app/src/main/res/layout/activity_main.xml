@@ -100,12 +100,12 @@
             android:layout_marginTop="100dp"/>
 
         <TextView
-            android:id="@+id/ter"
+            android:id="@+id/terminos"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="http://cb-develop.tk/terms"
+            android:text="Terminos y condiciones"
             android:textSize="12dp"
-            android:autoLink="all"
+            android:textColor="@color/text"
             android:fontFamily="@font/nunito"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
@@ -121,7 +121,7 @@
             android:fontFamily="@font/nunito"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/ter"
+            app:layout_constraintTop_toBottomOf="@id/terminos"
             app:layout_constraintBottom_toBottomOf="parent"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="50dp"/>

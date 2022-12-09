@@ -34,7 +34,7 @@ class Home : AppCompatActivity() {
         apiClient = ApiClient()
         sessionManager = SessionManager(this)
 
-        MyToolbar().mostrar(this, "Donut", false)
+        MyToolbar().mostrar(this, "donut", false)
 
         initRecyclerView()
         obtenerMatriculas()

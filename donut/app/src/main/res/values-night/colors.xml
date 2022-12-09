@@ -8,4 +8,5 @@
     <color name="edit">#323232</color>
     <color name="text">#c8c8c8</color>
     <color name="splash">#1f2937</color>
+    <color name="btndisable">#5AB7D4</color>
 </resources>
