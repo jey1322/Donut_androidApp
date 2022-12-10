@@ -11,6 +11,47 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/banner"
+            android:id="@+id/banner"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="30dp">
+
+            <TextView
+                android:id="@+id/clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_clear"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Si tus credenciales estan correctos, lo mas probable es que aun no tengas nota en este año"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:textColor="@color/white"
+                android:layout_marginVertical="10dp"
+                android:layout_marginHorizontal="30dp"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                android:fontFamily="@font/nunito"
+                android:textAlignment="center"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
         <TextView
             android:id="@+id/logo"
             android:layout_width="wrap_content"
@@ -84,14 +125,13 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/etAnio"
             android:layout_marginTop="50dp"/>
-
         <TextView
-            android:id="@+id/tvterminos"
+            android:id="@+id/terminos"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Al usar este servicio acepta los Términos"
-            android:textColor="@color/text"
+            android:text="Al usar este servicio acepta los Términos."
             android:textSize="12dp"
+            android:textColor="@color/text"
             android:fontFamily="@font/nunito"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
@@ -100,22 +140,9 @@
             android:layout_marginTop="100dp"/>
 
         <TextView
-            android:id="@+id/terminos"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Terminos y condiciones"
-            android:textSize="12dp"
-            android:textColor="@color/text"
-            android:fontFamily="@font/nunito"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tvterminos"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Desarrollado por @KenetPicado y @JairoPaniagua"
+            android:text="Desarrollado por Kenet Picado y Jairo Paniagua"
             android:textColor="@color/text"
             android:textSize="12dp"
             android:fontFamily="@font/nunito"
@@ -123,7 +150,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/terminos"
             app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:layout_marginBottom="50dp"/>
 
 

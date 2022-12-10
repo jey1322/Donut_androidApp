@@ -5,6 +5,7 @@ import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.InputType
+import android.view.View
 import android.widget.Toast
 import com.codein.donut.databinding.ActivityMainBinding
 import com.codein.donut.preferense.SessionManager
@@ -35,6 +36,10 @@ class MainActivity : AppCompatActivity() {
                 val intent = Intent(Intent.ACTION_VIEW, uri)
                 startActivity(intent)
             }
+        }
+
+        binding.clear.setOnClickListener {
+            binding.banner.visibility = View.GONE
         }
 
         binding.btnIngresar.setOnClickListener {
@@ -91,6 +96,7 @@ class MainActivity : AppCompatActivity() {
 
                                 override fun onResponse(call: Call<LoginResponse>, response: Response<LoginResponse>
                                 ) {
+                                    binding.banner.visibility = View.GONE
                                     val resp = response.body()
                                     if (resp?.student?.name != null) {
 
@@ -108,6 +114,9 @@ class MainActivity : AppCompatActivity() {
                                         finish()
                                     }
                                     else {
+
+                                        binding.banner.visibility = View.VISIBLE
+
                                         binding.etAnio.error = "este es el año a buscar?"
                                         //pintar el contenido de etpass
                                         binding.etPin.error = "PIN es correcto?"
