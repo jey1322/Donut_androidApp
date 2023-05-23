@@ -67,7 +67,7 @@
 
         <EditText
             android:id="@+id/etCarnet"
-            android:layout_width="240dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Carnet"
             android:inputType="text"
@@ -78,11 +78,12 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/logo"
-            android:layout_marginTop="45dp"/>
+            android:layout_marginTop="45dp"
+            android:layout_marginHorizontal="80dp"/>
 
         <EditText
             android:id="@+id/etPin"
-            android:layout_width="240dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="PIN"
             android:inputType="textPassword"
@@ -93,11 +94,12 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/etCarnet"
-            android:layout_marginTop="20dp"/>
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="80dp"/>
 
         <EditText
             android:id="@+id/etAnio"
-            android:layout_width="240dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Año lectivo (ej. 2020)"
             android:inputType="number"
@@ -108,11 +110,12 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/etPin"
-            android:layout_marginTop="20dp"/>
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="80dp"/>
 
         <androidx.constraintlayout.utils.widget.MotionButton
             android:id="@+id/btnIngresar"
-            android:layout_width="240dp"
+            android:layout_width="match_parent"
             android:layout_height="40dp"
             android:text="Ver notas"
             android:textColor="@color/white"
@@ -124,7 +127,8 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/etAnio"
-            android:layout_marginTop="50dp"/>
+            android:layout_marginTop="50dp"
+            android:layout_marginHorizontal="80dp"/>
         <TextView
             android:id="@+id/terminos"
             android:layout_width="wrap_content"
