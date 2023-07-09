@@ -20,7 +20,6 @@ import retrofit2.Response
 
 class Home : AppCompatActivity() {
     private lateinit var binding: ActivityHomeBinding
-
     private lateinit var sessionManager: SessionManager
     private lateinit var apiClient: ApiClient
     private lateinit var adapter: NotaAdapter
@@ -30,7 +29,6 @@ class Home : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         apiClient = ApiClient()
         sessionManager = SessionManager(this)
 

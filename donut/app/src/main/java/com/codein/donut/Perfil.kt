@@ -9,11 +9,9 @@ import com.codein.donut.preferense.SessionManager
 import com.codein.donut.toolbar.MyToolbar
 
 class Perfil : AppCompatActivity() {
-
     private lateinit var binding : ActivityPerfilBinding
     private lateinit var sessionManager: SessionManager
 
-    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityPerfilBinding.inflate(layoutInflater)
